@@ -1,0 +1,19 @@
+.cover {
+  height: 100vh;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 40px;
+  padding: 30px;
+  /* background-color: #222223; */
+}
+
+.a {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: aqua;
+}
