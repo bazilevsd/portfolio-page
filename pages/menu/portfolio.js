@@ -30,6 +30,7 @@ export default function Portfolio() {
           }}
           priority
         />
+
         <div className={styles.projectButtons}>
           <button
             className={styles.button91}

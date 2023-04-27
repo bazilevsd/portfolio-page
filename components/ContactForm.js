@@ -10,6 +10,7 @@ import {
 } from "react-icons/ai";
 import { RiMapPinUserFill } from "react-icons/ri";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
+import { sendEmail } from "../utilities/email";
 
 export default class ContactForm extends Component {
   constructor() {
@@ -30,10 +31,8 @@ export default class ContactForm extends Component {
     evt.preventDefault();
     try {
       const formData = { ...this.state };
-      delete formData.error;
-      delete formData.confirm;
-      const user = await signUp(formData);
-      this.props.setUser(user);
+      sendEmail(formData.name, formData.email, formData.message);
+      console.log("submit data", formData.name);
     } catch (error) {
       this.setState({ error: "Sign Up Failed" });
     }
@@ -43,7 +42,10 @@ export default class ContactForm extends Component {
       <>
         <section className={styles.contact}>
           <div className={styles.contactWrapper}>
-            <form className={styles.formHorizontal}>
+            <form
+              className={styles.formHorizontal}
+              onSubmit={this.handleSubmit}
+            >
               <input
                 type="text"
                 className={styles.formControl}
@@ -67,10 +69,13 @@ export default class ContactForm extends Component {
                 rows="10"
                 placeholder="MESSAGE"
                 name="message"
+                value={this.state.message}
                 onChange={this.handleChange}
                 required
               ></textarea>
-              <Button />
+              <button className={styles.formButton} type="submit">
+                Submit{" "}
+              </button>
             </form>
 
             <div className={styles.directContactContainer}>
@@ -116,13 +121,7 @@ export default class ContactForm extends Component {
                     className={styles.contactIcon}
                   >
                     <li>
-                      <a
-                        href="#"
-                        target="_blank"
-                        className={styles.contactIcon}
-                      >
-                        <AiFillLinkedin className={styles.size} />
-                      </a>
+                      <AiFillLinkedin className={styles.size} />
                     </li>
                   </Link>
                   <li>
