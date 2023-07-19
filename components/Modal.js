@@ -19,6 +19,7 @@ const Modal = ({ open, onClose, text, link }) => {
           </p>
           <div>
             <a href={link}>
+              {console.log(link)}
               {/* <a href="https://store-3d-model-app.herokuapp.com/store/"> */}
               <button className={styles.button91}>Visit Site</button>
             </a>
