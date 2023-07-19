@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap");
 
 :root {
   width: 100%;
   --border-radius: 12px;
   --max-height: 100%;
+  font-family: "Lumanosimo", cursive;
   /* --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace; */
@@ -30,7 +32,7 @@
 
 html,
 body {
-  font-family: "Londrina Shadow", cursive;
+  font-family: "Lumanosimo", cursive;
   width: 100%;
   height: 100%;
   background-color: linear-gradient(rgb(16, 16, 16), rgb(114, 117, 117));
