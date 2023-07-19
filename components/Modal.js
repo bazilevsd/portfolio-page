@@ -2,13 +2,18 @@ import React from "react";
 import styles from "./Modal.module.css";
 import Link from "next/link";
 
-const Modal = ({ open, onClose, text, link }) => {
+const Modal = ({ open, onClose, text, link, onChange }) => {
+  console.log(text);
+
+  console.log(link);
+
   if (!open) return null;
   return (
     <div onClick={onClose} className={styles.overlay}>
       <div
         onClick={(e) => {
           e.stopPropagation();
+          onChange;
         }}
         className={styles.modalContainer}
       >
@@ -19,7 +24,6 @@ const Modal = ({ open, onClose, text, link }) => {
           </p>
           <div>
             <a href={link}>
-              {console.log(link)}
               {/* <a href="https://store-3d-model-app.herokuapp.com/store/"> */}
               <button className={styles.button91}>Visit Site</button>
             </a>

@@ -29,18 +29,26 @@ export default function Portfolio() {
           <button
             className={styles.button91}
             onClick={() => {
+              setLink("https://sage-jelly-38262b.netlify.app");
+              console.log(link);
+              setText(
+                "This is the post graduate project. Web site for Aesthetic MedSpa. The important and complicated component was the scheduling app, which I build based on MUI calendar."
+              );
+              console.log(text);
               setOpenModal(true);
             }}
           >
             About
           </button>
           <Modal
-            onChange={() => {
-              setLink("https://sage-jelly-38262b.netlify.app");
-              setText(
-                "This is the post graduate project. Web site for Aesthetic MedSpa. The important and complicated component was the scheduling app, which I build based on MUI calendar."
-              );
-            }}
+            // onChange={() => {
+            //   setLink("https://sage-jelly-38262b.netlify.app");
+            //   console.log(link);
+            //   setText(
+            //     "This is the post graduate project. Web site for Aesthetic MedSpa. The important and complicated component was the scheduling app, which I build based on MUI calendar."
+            //   );
+            //   console.log(text);
+            // }}
             open={openModal}
             text={text}
             link={link}
@@ -69,13 +77,22 @@ export default function Portfolio() {
         <div className={styles.projectButtons}>
           <button
             className={styles.button91}
-            onClick={() => setOpenModal(true)}
+            onClick={() => {
+              setLink("https://store-3d-model-app.herokuapp.com/store/");
+              console.log(link);
+              setText(
+                "The 3D Model store was our second unit project at GA. It uses react without backend."
+              );
+              console.log(text);
+              setOpenModal(true);
+            }}
           >
             About
           </button>
           <Modal
             open={openModal}
-            text="The 3D Model store was our second unit project at GA. It uses react without backend."
+            text={text}
+            link={link}
             onClose={() => setOpenModal(false)}
           />
 
@@ -102,13 +119,22 @@ export default function Portfolio() {
         <div className={styles.projectButtons}>
           <button
             className={styles.button91}
-            onClick={() => setOpenModal(true)}
+            onClick={() => {
+              setLink("https://bazilevsd.github.io/battleship-game/");
+              console.log(link);
+              setText(
+                "This project was final project of our first unit at GA. The project is done in vanila JS and and I a very proud of it. It is classic battleship game but its done without separation of players for technical limitations of JS. Even though it is fully functional andis following the main concept of the game"
+              );
+              console.log(text);
+              setOpenModal(true);
+            }}
           >
             About
           </button>
           <Modal
             open={openModal}
-            text="This project was final project of our first unit at GA. The project is done in vanila JS and and I a very proud of it. It is classic battleship game but its done without separation of players for technical limitations of JS. Even though it is fully functional andis following the main concept of the game"
+            text={text}
+            link={link}
             onClose={() => setOpenModal(false)}
           />
 
