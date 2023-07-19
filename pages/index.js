@@ -70,6 +70,38 @@ export default function Home() {
         <div className={styles.project}>
           <Image
             // className={styles.logo}
+            src="/beauty-site.png"
+            alt="beauty-site"
+            width={900}
+            height={700}
+            style={{
+              objectFit: "cover",
+              borderRadius: "50px",
+            }}
+            priority
+          />
+          <div className={styles.projectButtons}>
+            <button
+              className={styles.button91}
+              onClick={() => setOpenModal(true)}
+            >
+              About
+            </button>
+            <Modal
+              open={openModal}
+              text="This is the post graduate project. Web site for Aesthetic MedSpa. The important and complicated component was the scheduling app, which I build based on MUI calendar."
+              onClose={() => setOpenModal(false)}
+            />
+
+            <a href="https://sage-jelly-38262b.netlify.app">
+              <button className={styles.button91}>Visit Site</button>
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.project}>
+          <Image
+            // className={styles.logo}
             src="/store-project.png"
             alt="store-project"
             width={900}
