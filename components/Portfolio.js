@@ -1,22 +1,56 @@
-import Link from "next/link";
-import styles from "./Portfolio.module.css";
 import Modal from "@/components/Modal";
 import { useState } from "react";
 import Image from "next/image";
-
+import styles from "@/styles/Prtfolio.module.css";
 export default function Portfolio() {
   const [openModal, setOpenModal] = useState(false);
   const [text, setText] = useState("");
+  const [link, setLink] = useState("");
   return (
-    <div className={styles.cover}>
-      <div className={styles.title}>
-        <h1>Portfolio</h1>
-        <h2>
-          <Link className={styles.a} href="/">
-            Back to home
-          </Link>
-        </h2>
+    <>
+      <div className={styles.sec3}>
+        <p className={styles.port}>Portfolio</p>
       </div>
+
+      <div className={styles.project}>
+        <Image
+          // className={styles.logo}
+          src="/beauty-site.png"
+          alt="beauty-site"
+          width={900}
+          height={700}
+          style={{
+            objectFit: "cover",
+            borderRadius: "50px",
+          }}
+          priority
+        />
+        <div className={styles.projectButtons}>
+          <button
+            className={styles.button91}
+            onClick={() => {
+              setLink("https://sage-jelly-38262b.netlify.app");
+              setText(
+                "This is the post graduate project. Web site for Aesthetic MedSpa. The important and complicated component was the scheduling app, which I build based on MUI calendar."
+              );
+              setOpenModal(true);
+            }}
+          >
+            About
+          </button>
+          <Modal
+            open={openModal}
+            text={text}
+            link={link}
+            onClose={() => setOpenModal(false)}
+          />
+
+          <a href="https://sage-jelly-38262b.netlify.app">
+            <button className={styles.button91}>Visit Site</button>
+          </a>
+        </div>
+      </div>
+
       <div className={styles.project}>
         <Image
           // className={styles.logo}
@@ -30,7 +64,6 @@ export default function Portfolio() {
           }}
           priority
         />
-
         <div className={styles.projectButtons}>
           <button
             className={styles.button91}
@@ -82,6 +115,6 @@ export default function Portfolio() {
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 }

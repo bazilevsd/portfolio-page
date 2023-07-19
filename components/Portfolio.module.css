@@ -1,27 +1,22 @@
-.cover {
-  height: 100vh;
-}
-.title {
+.sec3 {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  row-gap: 40px;
-  padding: 30px;
-  /* background-color: #222223; */
+  flex-direction: column;
+  padding: 50px;
 }
 
-.a {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  color: aqua;
+.port {
+  font-size: 10vh;
 }
 .project {
   display: flex;
   align-items: center;
 }
-
+.projectButtons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 20px;
+}
 /* CSS */
 .button91 {
   color: #fff;
@@ -54,11 +49,4 @@
   touch-action: manipulation;
   /* z-index: -1; */
   cursor: pointer;
-}
-
-.projectButtons {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
-  padding: 20px;
 }
