@@ -35,19 +35,13 @@ export default function Portfolio() {
             About
           </button>
           <Modal
-            // onChange={() => {
-            //   setLink("https://sage-jelly-38262b.netlify.app");
-            //   setText(
-            //     "This is the post graduate project. Web site for Aesthetic MedSpa. The important and complicated component was the scheduling app, which I build based on MUI calendar."
-            //   );
-            // }}
-            open={() => {
+            onChange={() => {
               setLink("https://sage-jelly-38262b.netlify.app");
               setText(
                 "This is the post graduate project. Web site for Aesthetic MedSpa. The important and complicated component was the scheduling app, which I build based on MUI calendar."
               );
-              openModal;
             }}
+            open={openModal}
             text={text}
             link={link}
             onClose={() => setOpenModal(false)}
