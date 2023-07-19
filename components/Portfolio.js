@@ -1,7 +1,7 @@
 import Modal from "@/components/Modal";
 import { useState } from "react";
 import Image from "next/image";
-import styles from "@/styles/Portfolio.module.css";
+import styles from "./Portfolio.module.css";
 export default function Portfolio() {
   const [openModal, setOpenModal] = useState(false);
   const [text, setText] = useState("");
