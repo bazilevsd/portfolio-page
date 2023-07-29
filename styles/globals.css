@@ -9,7 +9,14 @@
   /* --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace; */
-  background-image: linear-gradient(rgb(16, 16, 16), rgb(114, 117, 117));
+  background-image: url("../public/background-text-medium.jpg");
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* background-image: linear-gradient(rgb(16, 16, 16), rgb(114, 117, 117)); */
   /* background: center center cover no-repeat fixed; */
 
   color: rgb(173, 247, 241);
@@ -18,6 +25,7 @@
   --clr-bg: rgba(40, 38, 38);
   --clr-white: rgba(255, 255, 255, 1);
 }
+
 *,
 *::before,
 *::after {
@@ -35,7 +43,8 @@ body {
   font-family: "Lumanosimo", cursive;
   width: 100%;
   height: 100%;
-  background-color: linear-gradient(rgb(16, 16, 16), rgb(114, 117, 117));
+
+  /* background-color: linear-gradient(rgb(16, 16, 16), rgb(114, 117, 117)); */
   /* background-size: var(--max-height); */
   /* overflow-x: hidden; */
 }
@@ -45,10 +54,10 @@ body {
   height: 100%;
   width: 100%;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
