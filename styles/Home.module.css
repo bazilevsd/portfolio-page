@@ -31,7 +31,13 @@
   z-index: 2;
   font-family: var(--font-mono); */
 }
-
+@media screen and (max-width: 900px) {
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .sec2 {
   display: flex;
   justify-content: space-around;
@@ -49,6 +55,7 @@
 }
 .image {
   border: solid 4px rgb(57, 231, 228);
+  margin-left: 20px;
 }
 
 .menu {

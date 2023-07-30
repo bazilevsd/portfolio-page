@@ -45,8 +45,8 @@ export default function Home() {
               // className={styles.logo}
               src="/IMG_6018.jpg"
               alt="Darya Bazilevskaya"
-              width={200}
-              height={200}
+              width={240}
+              height={240}
               style={{
                 objectFit: "cover",
                 borderRadius: "50px",
